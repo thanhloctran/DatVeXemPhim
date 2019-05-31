@@ -1,0 +1,19 @@
+<!--Begin item -->
+<div class="card">
+  <img class="card-img-top" [src]="phim.HinhAnh" alt="">
+  <div class="card-body">
+      <h4 class="card-title">{{phim.TenPhim}}</h4>
+      <p class="card-text">{{phim.Gia}}</p>
+      <!--truyền ham so len url  C1  -->
+      <!-- <a class="btn btn-primary" routerLink="/home/chi-tiet-phim/{{phim.MaPhim}}"  >Mua vé</a>  -->
+
+
+    <!-- c2 bao bằng dấu ngoặc vuông-->
+      <!-- <a class="btn btn-primary" [routerLink]="['/home/chi-tiet-phim/']"  [queryParams]="{maPhim: phim.MaPhim, tenPhim:phim.TenPhim} " >Mua vé</a>  -->
+  
+    <!-- c3 truyen tham so bằng sự kiện -->
+    <button class="btn btn-success" (click)="muaVe()">Mua vé</button>
+  
+    </div>
+</div>
+<!-- End item -->

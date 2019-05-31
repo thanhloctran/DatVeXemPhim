@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <ng-container *ngFor="let item of danhSachGhe , let i = index">
+            <app-danh-sach-ghe [seat]="item" (eventBook)="datghe($event)"></app-danh-sach-ghe> <!--Truyền dữ liệu trong mảng ds ghế đến ghế để hiện ra số ghế-->
+            <br *ngIf="(i+1)%6===0"/>
+        </ng-container>
+      </div>
+      <div class="col-sm-6">
+        <h4>Danh sách ghế được đặt</h4>
+        <p *ngFor="let item of danhSachGheDaDat">Ghế: {{item.TenGhe}} - {{item.GiaVe}}.00 VND - Loại : {{item.LoaiGhe}}<span style="color:red" (click)="huyGhe(
+          item)">[Hủy]</span> </p>
+        <!-- <button class="btn btn-success">Xác Nhận</button> -->
+      </div>
+      
+      
+    </div>
+  </div>
